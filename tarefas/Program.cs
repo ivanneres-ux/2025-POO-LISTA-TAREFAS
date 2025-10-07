@@ -1,4 +1,6 @@
-﻿public class Operacoes
+﻿using MySql.Data.MySqlClient;
+
+public class Operacoes
 {
     public int Criar(Tarefa tarefa)
     {
@@ -18,6 +20,6 @@
     }
     public void Excluir(int id)
     {
-        
+
     }
 }
