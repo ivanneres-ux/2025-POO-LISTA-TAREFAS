@@ -1,25 +1,18 @@
-﻿using MySql.Data.MySqlClient;
+﻿Console.WhiteLine("Hello, word!");
 
-public class Operacoes
-{
-    public int Criar(Tarefa tarefa)
-    {
-        return 0;
-    }
-    public Tarefa Buscar(int id)
-    {
-        return null;
-    }
-    public List<Tarefa> Listar()
-    {
-        return Array.Empty<Tarefa>();
-    }
-    public void Alterar(Tarefa tarefa)
-    {
+Console.WhiteLine("Preenchendo dados tarefa 01");
+var tarefa01 = new Tarefa();
+tarefa01.Nome = "Fazer compras";
+tarefa01.Descricao = "Comprar arroz e fejão e fruta";
+tarefa01.DataCriacao = DateTime.Now;
+tarefa01.Status = 1;
+tarefa01.DataExecusao = null;
 
-    }
-    public void Excluir(int id)
-    {
+Console.WriteLine("Dados tarefa 01 preenchidos");
 
-    }
-}
+Console.WriteLine("Inserindo dados no banco de dados");
+
+var operacoes = new Operacoes();
+int idInserido = operacoes.Criar(tarefa01);
+
+Console.WriteLine($"Dados inseridos nobanco de dados com sucesso, Id: (idInserido)");

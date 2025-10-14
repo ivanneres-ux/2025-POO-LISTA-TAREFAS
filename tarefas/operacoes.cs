@@ -1,6 +1,8 @@
+using MySql.Data;
+
 public class Operacoes
 {
-        private string connectionString = "";
+    private string connectionString = @"server=phpmyadmin.uni9.marize.us;User ID=user_poo;passwordd=S3nh4!F0rt3;database=user_poo;";
     public int Criar(Tarefa tarefa)
     {
         using (var conexao = new MySqlConnection(connectionString))
@@ -22,15 +24,7 @@ public class Operacoes
         }
     }
 
-    public Tarefa Buscar (int Id)
-    {
-        return null;
-    }
-    public int Criar(Tarefa tarefa)
-    {
-        return 0;
-    }
-    public Tarefa Buscar(int id)
+    public Tarefa Buscar(int Id)
     {
         return null;
     }
